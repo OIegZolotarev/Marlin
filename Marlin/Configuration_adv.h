@@ -1413,7 +1413,9 @@
   //#define UTF_FILENAME_SUPPORT
 
   // This allows hosts to request long names for files and folders with M33
-  //#define LONG_FILENAME_HOST_SUPPORT
+  // #ReDBot BTT TFT Screen
+  #define LONG_FILENAME_HOST_SUPPORT
+  // #ReDBot BTT TFT Screen
 
   // Enable this option to scroll long filenames in the SD card menu
   //#define SCROLL_LONG_FILENAMES
@@ -1438,7 +1440,9 @@
   /**
    * Auto-report SdCard status with M27 S<seconds>
    */
-  //#define AUTO_REPORT_SD_STATUS
+  // #ReDBot BTT TFT Screen
+  #define AUTO_REPORT_SD_STATUS
+  // #ReDBot BTT TFT Screen
 
   /**
    * Support for USB thumb drives using an Arduino USB Host Shield or
@@ -1508,7 +1512,9 @@
    *
    * :[ 'LCD', 'ONBOARD', 'CUSTOM_CABLE' ]
    */
-  //#define SDCARD_CONNECTION LCD
+  // #ReDBot BTT TFT Screen
+  #define SDCARD_CONNECTION ONBOARD
+  // #ReDBot BTT TFT Screen
 
   // Enable if SD detect is rendered useless (e.g., by using an SD extender)
   //#define NO_SD_DETECT
@@ -1822,11 +1828,22 @@
  *
  * Warning: Does not respect endstops!
  */
-//#define BABYSTEPPING
+
+// #ReDBot
+#define BABYSTEPPING
+// #ReDBot
+
 #if ENABLED(BABYSTEPPING)
-  //#define INTEGRATED_BABYSTEPPING         // EXPERIMENTAL integration of babystepping into the Stepper ISR
+  
+  // #ReDBot
+  #define INTEGRATED_BABYSTEPPING         // EXPERIMENTAL integration of babystepping into the Stepper ISR
+// #ReDBot
+
   //#define BABYSTEP_WITHOUT_HOMING
-  //#define BABYSTEP_ALWAYS_AVAILABLE       // Allow babystepping at all times (not just during movement).
+  // #ReDBot
+  #define BABYSTEP_ALWAYS_AVAILABLE       // Allow babystepping at all times (not just during movement).
+  // #ReDBot
+
   //#define BABYSTEP_XY                     // Also enable X/Y Babystepping. Not supported on DELTA!
   #define BABYSTEP_INVERT_Z false           // Change if Z babysteps should go the other way
   //#define BABYSTEP_MILLIMETER_UNITS       // Specify BABYSTEP_MULTIPLICATOR_(XY|Z) in mm instead of micro-steps
@@ -1845,7 +1862,9 @@
 
   //#define BABYSTEP_DISPLAY_TOTAL          // Display total babysteps since last G28
 
-  //#define BABYSTEP_ZPROBE_OFFSET          // Combine M851 Z and Babystepping
+  // #ReDBot
+  #define BABYSTEP_ZPROBE_OFFSET          // Combine M851 Z and Babystepping
+  // #ReDBot
   #if ENABLED(BABYSTEP_ZPROBE_OFFSET)
     //#define BABYSTEP_HOTEND_Z_OFFSET      // For multiple hotends, babystep relative Z offsets
     //#define BABYSTEP_ZPROBE_GFX_OVERLAY   // Enable graphical overlay on Z-offset editor
@@ -2170,7 +2189,9 @@
  * Currently handles M108, M112, M410, M876
  * NOTE: Not yet implemented for all platforms.
  */
-//#define EMERGENCY_PARSER
+// #ReDBot
+#define EMERGENCY_PARSER
+// #ReDBot
 
 /**
  * Realtime Reporting (requires EMERGENCY_PARSER)
@@ -2206,7 +2227,9 @@
 #define SERIAL_OVERRUN_PROTECTION
 
 // For serial echo, the number of digits after the decimal point
-//#define SERIAL_FLOAT_PRECISION 4
+// #ReDBot BTT TFT Screen
+#define SERIAL_FLOAT_PRECISION 4
+// #ReDBot BTT TFT Screen
 
 // @section extras
 
@@ -2347,7 +2370,9 @@
  *
  * Enable PARK_HEAD_ON_PAUSE to add the G-code M125 Pause and Park.
  */
-//#define ADVANCED_PAUSE_FEATURE
+// #ReDBot BTT TFT Screen
+#define ADVANCED_PAUSE_FEATURE
+// #ReDBot BTT TFT Screen
 #if ENABLED(ADVANCED_PAUSE_FEATURE)
   #define PAUSE_PARK_RETRACT_FEEDRATE         60  // (mm/s) Initial retract feedrate.
   #define PAUSE_PARK_RETRACT_LENGTH            2  // (mm) Initial retract.
@@ -2385,10 +2410,14 @@
   #define FILAMENT_CHANGE_ALERT_BEEPS         10  // Number of alert beeps to play when a response is needed.
   #define PAUSE_PARK_NO_STEPPER_TIMEOUT           // Enable for XYZ steppers to stay powered on during filament change.
 
-  //#define PARK_HEAD_ON_PAUSE                    // Park the nozzle during pause and filament change.
+// #ReDBot BTT TFT Screen
+  #define PARK_HEAD_ON_PAUSE                    // Park the nozzle during pause and filament change.
+// #ReDBot BTT TFT Screen
   //#define HOME_BEFORE_FILAMENT_CHANGE           // If needed, home before parking for filament change
 
-  //#define FILAMENT_LOAD_UNLOAD_GCODES           // Add M701/M702 Load/Unload G-codes, plus Load/Unload in the LCD Prepare menu.
+// #ReDBot BTT TFT Screen
+  #define FILAMENT_LOAD_UNLOAD_GCODES           // Add M701/M702 Load/Unload G-codes, plus Load/Unload in the LCD Prepare menu.
+// #ReDBot BTT TFT Screen
   //#define FILAMENT_UNLOAD_ALL_EXTRUDERS         // Allow M702 to unload all extruders above a minimum target temp (as set by M302)
 #endif
 
@@ -3553,14 +3582,18 @@
 /**
  * Auto-report position with M154 S<seconds>
  */
-//#define AUTO_REPORT_POSITION
+// #ReDBot BTT TFT Screen
+#define AUTO_REPORT_POSITION
+// #ReDBot BTT TFT Screen
 
 /**
  * Include capabilities in M115 output
  */
 #define EXTENDED_CAPABILITIES_REPORT
 #if ENABLED(EXTENDED_CAPABILITIES_REPORT)
-  //#define M115_GEOMETRY_REPORT
+// #ReDBot BTT TFT Screen
+  #define M115_GEOMETRY_REPORT
+// #ReDBot BTT TFT Screen
 #endif
 
 /**
@@ -3573,7 +3606,9 @@
 /**
  * Disable all Volumetric extrusion options
  */
-//#define NO_VOLUMETRICS
+// #ReDBot
+#define NO_VOLUMETRICS
+// #ReDBot
 
 #if DISABLED(NO_VOLUMETRICS)
   /**
@@ -3608,11 +3643,16 @@
 //#define NO_WORKSPACE_OFFSETS
 
 // Extra options for the M114 "Current Position" report
-//#define M114_DETAIL         // Use 'M114` for details to check planner calculations
+// #ReDBot BTT TFT Screen
+#define M114_DETAIL         // Use 'M114` for details to check planner calculations
+// #ReDBot BTT TFT Screen
+
 //#define M114_REALTIME       // Real current position based on forward kinematics
 //#define M114_LEGACY         // M114 used to synchronize on every call. Enable if needed.
 
-//#define REPORT_FAN_CHANGE   // Report the new fan speed when changed by M106 (and others)
+// #ReDBot BTT TFT Screen
+#define REPORT_FAN_CHANGE   // Report the new fan speed when changed by M106 (and others)
+// #ReDBot BTT TFT Screen
 
 /**
  * Set the number of proportional font spaces required to fill up a typical character space.
@@ -3784,9 +3824,13 @@
  * Host Prompt Support enables Marlin to use the host for user prompts so
  * filament runout and other processes can be managed from the host side.
  */
-//#define HOST_ACTION_COMMANDS
+// #ReDBot BTT TFT Screen
+#define HOST_ACTION_COMMANDS
+// #ReDBot BTT TFT Screen
 #if ENABLED(HOST_ACTION_COMMANDS)
-  //#define HOST_PROMPT_SUPPORT
+// #ReDBot BTT TFT Screen
+  #define HOST_PROMPT_SUPPORT
+// #ReDBot BTT TFT Screen
   //#define HOST_START_MENU_ITEM  // Add a menu item that tells the host to start
 #endif
 

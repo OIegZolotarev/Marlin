@@ -270,6 +270,12 @@ void GCodeQueue::flush_and_request_resend(const serial_index_t serial_ind) {
 
 static bool serial_data_available(serial_index_t index) {
   const int a = SERIAL_IMPL.available(index);
+
+  // #ReDBot
+  //SERIAL_ECHO(index.index);
+  //SERIAL_ECHO(a);
+  // #ReDBot
+
   #if BOTH(RX_BUFFER_MONITOR, RX_BUFFER_SIZE)
     if (a > RX_BUFFER_SIZE - 2) {
       PORT_REDIRECT(SERIAL_PORTMASK(index));
@@ -401,7 +407,16 @@ void GCodeQueue::get_serial_commands() {
   #if NO_TIMEOUTS > 0
     const millis_t ms = millis();
     if (ring_buffer.empty() && !any_serial_data_available() && ELAPSED(ms, last_command_time + NO_TIMEOUTS)) {
+
+      // #ReDBot
+      //SERIAL_ECHO((ring_buffer.empty() ? "ring_Buffer.empty() == true\n" : "ring_Buffer.empty() == false\n"));
+      //SERIAL_ECHO((!any_serial_data_available() ? "!any_serial_data_available() == true\n" : "!any_serial_data_available() == false\n"));
+      // #ReDBot
+
+      // #ReDBot -  
       SERIAL_ECHOLNPGM(STR_WAIT);
+      //SERIAL_ECHOLNPGM(STR_OK);
+      // #ReDBot
       last_command_time = ms;
     }
   #endif

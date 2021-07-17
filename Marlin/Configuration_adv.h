@@ -2157,12 +2157,16 @@
 // Without XON/XOFF flow control (see SERIAL_XON_XOFF below) 32 bytes should be enough.
 // To use flow control, set this buffer size to at least 1024 bytes.
 // :[0, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048]
-//#define RX_BUFFER_SIZE 1024
+// #ReDBot
+#define RX_BUFFER_SIZE 2048
+// #ReDBot
 
 #if RX_BUFFER_SIZE >= 1024
   // Enable to have the controller send XON/XOFF control characters to
   // the host to signal the RX buffer is becoming full.
-  //#define SERIAL_XON_XOFF
+  // #ReDBot
+  #define SERIAL_XON_XOFF
+  // #ReDBot
 #endif
 
 #if ENABLED(SDSUPPORT)
@@ -2179,7 +2183,9 @@
 // Dump an error to the serial port if the serial receive buffer overflows.
 // If you see these errors, increase the RX_BUFFER_SIZE value.
 // Not supported on all platforms.
-//#define RX_BUFFER_MONITOR
+// #ReDBot
+#define RX_BUFFER_MONITOR
+// #ReDBot
 
 /**
  * Emergency Command Parser
@@ -2217,7 +2223,9 @@
 // Therefore some clients abort after 30 seconds in a timeout.
 // Some other clients start sending commands while receiving a 'wait'.
 // This "wait" is only sent when the buffer is empty. 1 second is a good value here.
-//#define NO_TIMEOUTS 1000 // Milliseconds
+// #ReDBot
+#define NO_TIMEOUTS 1000 // Milliseconds
+// #ReDBot
 
 // Some clients will have this feature soon. This could make the NO_TIMEOUTS unnecessary.
 //#define ADVANCED_OK
@@ -3671,7 +3679,9 @@
 /**
  * Spend 28 bytes of SRAM to optimize the G-code parser
  */
+// #ReDBot
 #define FASTER_GCODE_PARSER
+// #ReDBot
 
 #if ENABLED(FASTER_GCODE_PARSER)
   //#define GCODE_QUOTED_STRINGS  // Support for quoted string parameters
@@ -4188,14 +4198,18 @@
 //#define PINS_DEBUGGING
 
 // Enable Marlin dev mode which adds some special commands
+// #ReDBot
 //#define MARLIN_DEV_MODE
+// #ReDBot
 
 /**
  * Postmortem Debugging captures misbehavior and outputs the CPU status and backtrace to serial.
  * When running in the debugger it will break for debugging. This is useful to help understand
  * a crash from a remote location. Requires ~400 bytes of SRAM and 5Kb of flash.
  */
+// #ReDBot
 //#define POSTMORTEM_DEBUGGING
+// #ReDBot
 
 /**
  * Software Reset options

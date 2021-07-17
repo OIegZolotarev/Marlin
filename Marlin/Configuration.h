@@ -108,7 +108,7 @@
  */
 
 // #ReDBot
-#define SERIAL_PORT 0
+#define SERIAL_PORT 3
 // #ReDBot
 
 /**
@@ -122,7 +122,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 250000
+#define BAUDRATE 115200
 //#define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate
 
 /**
@@ -133,7 +133,8 @@
 
 // #ReDBot
 //#define LPC_PINCFG_UART3_P4_28
-#define SERIAL_PORT_2 3
+//#define SERIAL_PORT_2 3
+#define SERIAL_PORT_2 0
 // #ReDBot
 
 //#define BAUDRATE_2 250000   // Enable to override BAUDRATE
@@ -936,7 +937,7 @@
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
 // #ReDBot
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 800, 800, 800, 847 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 400, 400, 800, 847 }
 // #ReDBot
 
 /**
@@ -2148,7 +2149,7 @@
  * you must uncomment the following option or it won't work.
  */
 // #ReDBot
-#define SDSUPPORT
+//#define SDSUPPORT
 // #ReDBot
 
 /**

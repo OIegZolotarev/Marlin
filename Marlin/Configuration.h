@@ -2850,7 +2850,12 @@
 // Temperature status LEDs that display the hotend and bed temperature.
 // If all hotends, bed temperature, and target temperature are under 54C
 // then the BLUE led is on. Otherwise the RED led is on. (1C hysteresis)
-//#define TEMP_STAT_LEDS
+// #ReDBot
+#define TEMP_STAT_LEDS
+#define STAT_LED_RED_PIN RGB_LED_R_PIN
+#define STAT_LED_BLUE_PIN RGB_LED_B_PIN
+
+// #ReDBot
 
 // Support for the BariCUDA Paste Extruder
 //#define BARICUDA
@@ -2885,13 +2890,15 @@
  *
  * LED Type. Enable only one of the following two options.
  */
-//#define RGB_LED
+// #ReDBot
+#define RGB_LED
+// #ReDBot
 //#define RGBW_LED
 
 #if EITHER(RGB_LED, RGBW_LED)
-  //#define RGB_LED_R_PIN 34
-  //#define RGB_LED_G_PIN 43
-  //#define RGB_LED_B_PIN 35
+  #define RGB_LED_R_PIN P1_23
+  #define RGB_LED_G_PIN P1_22
+  #define RGB_LED_B_PIN P1_21
   //#define RGB_LED_W_PIN -1
 #endif
 

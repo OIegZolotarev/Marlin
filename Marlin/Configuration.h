@@ -108,7 +108,7 @@
  */
 
 // #ReDBot
-#define SERIAL_PORT 3
+#define SERIAL_PORT -1
 // #ReDBot
 
 /**
@@ -144,8 +144,10 @@
  * Currently only supported for AVR, DUE, LPC1768/9 and STM32/STM32F1
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-//#define SERIAL_PORT_3 1
+// #ReDBot
+//#define SERIAL_PORT_3 -1
 //#define BAUDRATE_3 250000   // Enable to override BAUDRATE
+// #ReDBot
 
 // Enable the Bluetooth serial interface on AT90USB devices
 //#define BLUETOOTH

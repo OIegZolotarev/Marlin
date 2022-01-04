@@ -100,7 +100,7 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_RAMPS_14_EFB
+  #define MOTHERBOARD BOARD_BTT_SKR_V1_4_TURBO
 #endif
 
 /**
@@ -976,7 +976,7 @@
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
 // #ReDBot
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 400, 400, 800, 847 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 800, 800, 800, 847 }
 // #ReDBot
 
 /**
